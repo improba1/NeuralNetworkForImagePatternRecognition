@@ -19,11 +19,7 @@ The neural network was designed to recognize patterns in 4-pixel images:
 - **Training Visualization**: Monitored loss convergence over 2500 epochs
 
 ## 🏗️ Network Architecture
-Input Layer (12 neurons)
-↓
-Hidden Layer (6 neurons + bias) + ReLU activation
-↓
-Output Layer (4 neurons) + Softmax activation
+Input Layer (12 neurons) -> Hidden Layer (6 neurons + bias) + ReLU activation -> Output Layer (4 neurons) + Softmax activation
 
 ## 🛠️ Technical Implementation
 
