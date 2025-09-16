@@ -48,6 +48,7 @@ def forward_propagation(X, parameters):
     A2 = softmax(Z2)
     
     return A2, {"Z1": Z1, "A1": A1, "Z2": Z2, "A2": A2}
+```
 Training Process
 Loss Function: Categorical Cross-Entropy
 
