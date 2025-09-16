@@ -30,28 +30,22 @@ def relu(x):
     return np.maximum(0, x)
 
 def softmax(x):
-    exp_x = np.exp(x - np.max(x))
-    return exp_x / exp_x.sum(axis=0)
+    e = np.exp(z - np.max(z, axis=1, keepdims=True))
+    return e / np.sum(e, axis=1, keepdims=True)
 
 # Forward propagation
-def forward_propagation(X, parameters):
-    # Layer 1
-    Z1 = np.dot(parameters['W1'], X) + parameters['b1']
-    A1 = relu(Z1)
-    
-    # Output layer
-    Z2 = np.dot(parameters['W2'], A1) + parameters['b2']
-    A2 = softmax(Z2)
-    
-    return A2, {"Z1": Z1, "A1": A1, "Z2": Z2, "A2": A2}
+# Layer 1
+Z1 = X @ W1 + b1
+A1 = relu(Z1)
+
+# Output layer
+Z2 = A1 @ W2 + b2
+A2 = softmax(Z2)
 ```
+
 ## Training Process
 Loss Function: Categorical Cross-Entropy
-
-Optimization: Gradient Descent
-
 Epochs: 2500 iterations
-
 Learning Rate: Manually tuned for convergence
 
 ## 📊 Results
