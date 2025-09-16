@@ -49,7 +49,7 @@ def forward_propagation(X, parameters):
     
     return A2, {"Z1": Z1, "A1": A1, "Z2": Z2, "A2": A2}
 ```
-Training Process
+## Training Process
 Loss Function: Categorical Cross-Entropy
 
 Optimization: Gradient Descent
@@ -58,7 +58,7 @@ Epochs: 2500 iterations
 
 Learning Rate: Manually tuned for convergence
 
-📊 Results
+## 📊 Results
 The model successfully learned to classify patterns, showing clear convergence:
 
 Loss decreased consistently over training epochs
